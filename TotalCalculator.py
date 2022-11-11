@@ -44,16 +44,7 @@ def calc_total(bill_data,product_price):
         grand_total+=total
     print("Total:",grand_total)
     return grand_total
-    
-def move_file(filename,grand_total,data):
-    #add total to the bill file
-    entry={"Total":grand_total}
-    filename_processed=('C:\\Users\\Kirthi\\OneDrive\\Desktop\\HelloWorld\\python\\Billing\\Billing\\processed\\'+filename)
-    with open(filename_processed,'w') as f:
-        data.update(entry)
-        json.dump(data,f,indent=2)
-    os.remove('C:\\Users\\Kirthi\\OneDrive\\Desktop\\HelloWorld\\python\\Billing\\Billing\\bills\\'+filename)
-
+   
 def move_files_to_processed(filename):
     # Source path 
     source = 'C:\\Users\\Kirthi\\OneDrive\\Desktop\\HelloWorld\\python\\Billing\\Billing\\bills\\'+filename
